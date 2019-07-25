@@ -1,0 +1,170 @@
+@primaryColor:#1890ff;
+@blackColor:#2e3238;
+.wrapper {
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    width: 500px;
+}
+
+.member-wrapper {
+    float: right;
+    padding: 10px;
+    height: 100%;
+    width: 180px;
+    border-top-right-radius: .45rem;
+    border-bottom-right-radius: .45rem;
+    background: url('../assets/sea.png');
+    .member {
+        float: left;
+        text-align: center;
+        height: 30px;
+        margin: 4px;
+        border-radius: 3px;
+        background: @primaryColor;
+        color: #fff;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+        span {
+            line-height: 30px;
+        }
+    }
+}
+.chat-wrapper {
+    position: relative;
+    float: left;
+    width: 320px;
+    height: 100%;
+    color:#fff;
+    .header {
+        background: @primaryColor;
+        height: 45px;
+        border-top-left-radius: .45rem;
+        .icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url('../assets/logo_white.png');
+            background-size: contain;
+            margin-left: 10px;
+            margin-top: 7.5px;
+        }
+        .title {
+            display: inline-block;
+            line-height: 45px;
+            vertical-align: top;
+            margin-left: 10px;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    .content {
+        height: calc(100% - 90px);
+        overflow-y: scroll;
+        background: #eee;
+        .visual-area {
+          text-align: center;
+          min-height: 100%;
+          width: 100%;
+          bottom: 0px;
+          .notice-wrapper {
+            margin:5px 0;
+            float: left;
+            width: 100%;
+            .welcome-notice {
+              text-align: center;
+              padding: 2px 8px;
+              margin: 7px 0px;
+              color: @primaryColor;
+              background: lightgrey;
+              height: 16px;
+              border-radius: 8px;
+              font-size: 12px;
+            }
+          }
+          .message-wrapper {
+              padding: 5px;
+              width: 100%;
+              overflow: hidden;
+              text-align: center;
+              .avatar {
+                  border-radius: 100%;
+                  background: @primaryColor;
+                  text-align: center;
+                  font-size: 18px;
+                  width: 30px;
+                  height: 30px;
+                  p {
+                      line-height: 30px;
+                  }
+              }
+              .avatar-left,.message-left {
+                float: left;
+              }
+              .avatar-right,.message-right {
+                float: right;
+              }
+              .avatar-left {
+                  margin-right: 10px;
+              }
+              .avatar-right {
+                  margin-left: 10px;
+              }
+              .message {
+                  background: #fff;
+                  color: #333;
+                  border-radius: .25rem;   
+                  padding: 5px;               
+              }
+              .history {
+                  font-size: 14px;
+                  color: gray;
+              }
+          }
+          .message-wrapper:hover {
+              background: lightgray;
+          }
+        }
+    }
+    .content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .content::-webkit-scrollbar-thumb{
+      background-color: rgba(0,0,0,.05);
+      border-radius: 10px;
+      -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+    }
+    .content:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,.2);
+      border-radius: 10px;
+      -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+    }
+    .content::-webkit-scrollbar-track:hover {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+      background-color: rgba(0,0,0,.01);
+    }
+    .footer {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        height: 45px;
+        background: @primaryColor;
+        border-bottom-left-radius: .45rem;
+        .message-input {
+            line-height: 45px;
+            margin-left:10px;
+            margin-right: 10px;
+        }
+        .button {
+            margin-left: 30px;
+            margin-top: 7px;
+        }
+    }
+}
