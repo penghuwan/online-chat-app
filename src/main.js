@@ -1,3 +1,5 @@
+import "@babel/polyfill"; // 编译Promise等ES6语法,兼容IE8
+
 import ReactDOM from 'react-dom'
 import React from 'react';
 import './index.less'
