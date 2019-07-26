@@ -27,9 +27,9 @@ app.use(session(CONFIG, app));
 // 初始化数据库连接
 app.context.db = mysql.createPool({
     host: '127.0.0.1',
-    user: 'root',
-    password: 'phw441423',
-    database: 'penghuwan',
+    user: '##数据库用户名',
+    password: '##你的数据库密码',
+    database: '##你的数据库名称',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
