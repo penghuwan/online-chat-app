@@ -2,7 +2,7 @@
 
 1. 备注：项目使用了localStorage，所以在本地测试项目时，需要使用两种不同的浏览器，例如火狐和Chrome，才能模拟两个不同的聊天用户
 2. 启动项目前，请先执行以下建表语句，然后需要在chat/server/index.js中配置数据库连接参数（数据库名，账号密码等）
-```
+```sql
 CREATE TABLE USER(
     Id INT PRIMARY KEY AUTO_INCREMENT,
     nickname VARCHAR(50) NOT NULL UNIQUE, #昵称
